@@ -1,26 +1,7 @@
-largest = None
-smallest = None
-inum = None
+s = 'Monty Python'
 
-while True:
-    num = input("Enter a number: ")
-    if num == "done" : break
-    try:
-        inum = int(num)
-    except:
-        print('Invalid input')
-        continue
-    #print(inum)
-    if smallest is None:
-        smallest = inum
-        largest = inum
-    elif inum < smallest:
-        smallest = inum
-    elif inum > largest:
-        largest = inum
+print(s[0:4])
 
+print(s[6:7])
 
-
-print("Maximum is", largest)
-print("Minimum is", smallest)
-
+print(s[6:])

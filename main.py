@@ -1,7 +1,19 @@
-s = 'Monty Python'
+text = "X-DSPAM-Confidence:    0.8475"
 
-print(s[0:4])
+#find the start position
+spos = text.find(':')
 
-print(s[6:7])
+#slice out the number starting with the starting position
+extract = text[spos+1:]
 
-print(s[6:])
+#rip off the white space
+refined = extract.strip()
+
+#convert to float for project completion
+final = float(refined)
+
+#debug code
+#print(spos)
+#print(extract)
+
+print(final)

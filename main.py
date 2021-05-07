@@ -1,19 +1,10 @@
-text = "X-DSPAM-Confidence:    0.8475"
+email = 'nicholas.a.kruger2.ctr@mail.mil'
 
-#find the start position
-spos = text.find(':')
+# find the domain and print slice
+stpos = email.find('@')
+raw = email[stpos+1:]
 
-#slice out the number starting with the starting position
-extract = text[spos+1:]
-
-#rip off the white space
-refined = extract.strip()
-
-#convert to float for project completion
-final = float(refined)
-
-#debug code
-#print(spos)
-#print(extract)
+#remove leading and trailing whitespace if any
+final = raw.strip()
 
 print(final)

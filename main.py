@@ -8,4 +8,4 @@ for line in fh:
     if searchTerm not in line: continue
     count = count + 1
 
-print(searchTerm, 'occured', count, 'times in this file')  
+print(searchTerm, 'occured', count, 'times in this file.')  

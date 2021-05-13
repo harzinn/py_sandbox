@@ -1,7 +1,7 @@
 FROM harzinn/pydev:alpine
 
 WORKDIR /home/src
-COPY . .
+COPY /data/. .
 
 CMD ["main.py"]
 ENTRYPOINT ["python3"]

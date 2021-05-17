@@ -11,8 +11,7 @@ lst = list()
 for line in fh:
     lineSplit = line.split()
     for word in lineSplit:
-        if word in lst:
-            continue
+        if word in lst : continue
         lst.append(word)
 
 lst.sort()

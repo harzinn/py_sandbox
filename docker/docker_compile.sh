@@ -6,6 +6,7 @@ exec > /dev/null  # redirect stdout to /dev/null
 cp -r ../ data/
 rm -rf data/docker/
 rm -rf data/.*
+rm -rf homework/
 exec 1>&6 6>&- # restore stdout
 echo "Compling python-sandbox"
 echo "..."

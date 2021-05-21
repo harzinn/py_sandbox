@@ -10,10 +10,10 @@ bigcount = None
 
 #parse the file and append email address in From (not From:) lines
 for ln in handle:
-    if 'From' not in ln : continue #skip lines without from in them
-    if ln.startswith('From:') : continue #skip lines that start with From:
-    ln = ln.split() # split the line into individual items
-    emails.append(ln[1]) # append the email address to the emails list
+    if 'From' not in ln : continue 
+    if ln.startswith('From:') : continue 
+    ln = ln.split() 
+    emails.append(ln[1]) 
 
 #histogram creation
 for email in emails:

@@ -12,8 +12,9 @@ bigcount = None
 for ln in handle:
     if 'From' not in ln : continue 
     if ln.startswith('From:') : continue 
-    ln = ln.split() 
-    emails.append(ln[1]) 
+    if ln.startswith('From '):
+        ln = ln.split() 
+        emails.append(ln[1]) 
 
 #histogram creation
 for email in emails:

@@ -1,4 +1,16 @@
-counts = { 'chuck' : 1, 'fred' : 42, 'jan' : 100 }
+fhand = open('romeo.txt')
+counts = dict()
 
-for k, v in counts.items():
-    print(k, v)
+for line in fhand:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word,0) + 1
+
+lst = list()
+
+for key, val in counts.items():
+    newtup = (val, key)
+    lst.append(newtup)
+
+
+

@@ -3,10 +3,10 @@ import re
 
 #file check 
 while True:
-    fname = input('Enter file name or type \'done\' to quit: ' )
+    fname = input('Enter file name or type \'quit\' to quit: ' )
     if len(fname) < 1:
         fname = 'regex_sum_42.txt'
-    if fname == 'done' :
+    if fname == 'quit' :
         print('Quitting')
         quit()
     try:

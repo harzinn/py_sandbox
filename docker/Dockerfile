@@ -1,4 +1,4 @@
-FROM harzinn/pydev:alpine
+FROM harzinn/py_sand
 
 WORKDIR /home/src
 COPY /data/. .

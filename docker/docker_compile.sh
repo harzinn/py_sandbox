@@ -3,10 +3,12 @@ exec 6>&1 # saves stdout
 echo "Copying files to local test staging"
 echo "..."
 exec > /dev/null  # redirect stdout to /dev/null
-cp -r ../ data/
-rm -rf data/docker/
-rm -rf data/.*
-rm -rf homework/
+mkdir data/
+
+#add files you want copied into the containerhere
+cp ../main.py data/
+
+
 exec 1>&6 6>&- # restore stdout
 echo "Compling python-sandbox"
 echo "..."

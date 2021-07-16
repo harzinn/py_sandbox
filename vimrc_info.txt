@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/1301352/python-ide-on-linux-console

@@ -11,7 +11,20 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-url = input('Enter - ')
+while True:
+    url = input('Enter - ')
+    if len(url) < 1:
+        url = "https://www.google.com"
+        break
+    else:
+        pass
+    try:
+        html = urllib.request.urlopen(url, context=ctx).read()
+        break
+    except:
+        print('Invalid website, try again')
+        continue
+
 html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
